@@ -1,11 +1,10 @@
-# Bộ bài tập C đa cấu trúc
+# Multi-structure C exercises
+This repository offers several C exercises that demonstrate different ways to organize code, from a single-file CLI to static and shared library layouts. Each folder under `exercises/` contains starter code and a short README.
 
-Kho lưu trữ cung cấp nhiều bài tập C với cấu trúc dự án khác nhau, từ ứng dụng một tệp cho tới build static/shared library. Mỗi thư mục con dưới `exercises/` chứa hướng dẫn riêng.
+## Exercises
+- `01-basic-cli`: Minimal one-source project. Parse integer CLI arguments, ignore invalid values, and report count, sum, and average.
+- `02-static-library`: Split code into `include/`, `src/`, and `app/`, building a small stats library consumed by an example program.
+- `03-shared-library`: Shared library example with reusable text helpers and a demonstration executable.
 
-## Danh sách bài tập
-- `01-basic-cli`: dự án tối giản 1 tệp nguồn + Makefile, đọc số từ dòng lệnh và tính trung bình.
-- `02-static-library`: tách `include/`, `src/`, `app/`; build static library `libstats.a` rồi liên kết ứng dụng minh họa.
-- `03-shared-library`: cấu trúc CMake tạo shared library `textutils` và binary mẫu.
-
-## Cách bắt đầu
-Chọn một thư mục bài tập và làm theo README bên trong để build và chạy.
+## How to use these exercises
+The build scripts were intentionally removed so you can practice creating your own Makefile or CMake setup. Each exercise README describes the expected outcome, and the accompanying `SOLUTION.txt` files show reference compile and run commands.

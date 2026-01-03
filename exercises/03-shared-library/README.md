@@ -1,15 +1,11 @@
-# Bài tập 3: Shared library với CMake
+# Exercise 3: Shared library without prepared build files
 
-Cấu trúc dùng CMake cho dự án chia sẻ mã giữa thư viện động và ứng dụng ví dụ.
+This folder contains source and header files for a small shared library (`textutils`) and a demonstration program. You will supply the build tooling (Makefile, CMake project, or manual commands) to compile the shared object and link the example app.
 
-## Cách build & chạy
-```bash
-cmake -S . -B build
-cmake --build build
-./build/textutils-demo
-```
+## Build & run
+Create your own build steps to generate a shared library and an executable that links against it. `SOLUTION.txt` includes one way to do this with plain `gcc` commands.
 
-## Mục tiêu học
-- Tạo shared library (`.so`/`.dll`) với CMake.
-- Quản lý include path thông qua `target_include_directories`.
-- Liên kết executable với thư viện động vừa build.
+## Learning goals
+- Produce a shared library (`.so`/`.dll`) and link a consumer program.
+- Manage include paths and linker flags yourself.
+- Gain familiarity with build options needed for position-independent code.

@@ -1,14 +1,11 @@
-# Bài tập 2: Static library
+# Exercise 2: Static library layout
 
-Cấu trúc thư mục tách rõ `include/`, `src/` và `app/`. Bài tập hướng dẫn build thư viện tĩnh `libstats.a` và liên kết với ứng dụng minh họa.
+This directory separates `include/`, `src/`, and `app/`. The goal is to build a small stats library (`libstats.a`) and link it with the sample application in `app/`.
 
-## Cách build & chạy
-```bash
-make
-./stats-demo
-```
+## Build & run
+Provide your own Makefile or set of shell commands to compile the library and the demo binary. See `SOLUTION.txt` for one possible sequence of commands.
 
-## Mục tiêu học
-- Tổ chức mã nguồn theo header/implementation/app.
-- Dùng `ar` để tạo static library.
-- Liên kết ứng dụng với thư viện tĩnh đã build.
+## Learning goals
+- Organize code into headers, implementations, and a consumer application.
+- Use `ar` to create and link a static library.
+- Practice designing a multi-target build script yourself.

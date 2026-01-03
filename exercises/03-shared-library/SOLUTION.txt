@@ -1,0 +1,17 @@
+# Reference build steps
+mkdir -p build
+
+# 1) Build the position-independent object for the library.
+gcc -std=c11 -Wall -Wextra -fPIC -Iinclude -c src/textutils.c -o build/textutils.o
+
+# 2) Produce the shared library (Linux naming shown; adjust for your platform).
+gcc -shared -o build/libtextutils.so build/textutils.o
+
+# 3) Compile the demo app and link against the shared library.
+gcc -std=c11 -Wall -Wextra -Iinclude examples/main.c -Lbuild -ltextutils -Wl,-rpath,'$ORIGIN' -o build/textutils-demo
+
+# 4) Run the demo with the runtime library path pointing to the build directory if needed.
+LD_LIBRARY_PATH=build ./build/textutils-demo
+
+# Expected behavior
+# The demo should print uppercase, lowercase, and title-cased versions of the sample string "Shared Library Demo".
