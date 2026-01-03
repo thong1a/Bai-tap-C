@@ -1,0 +1,6 @@
+# Build artifacts
+exercises/01-basic-cli/cli-summary
+exercises/02-static-library/build/
+exercises/02-static-library/libstats.a
+exercises/02-static-library/stats-demo
+exercises/03-shared-library/build/
