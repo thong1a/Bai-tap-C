@@ -1,0 +1,10 @@
+# Reference build steps
+# Compile the single source file into an executable named cli-summary.
+gcc -std=c11 -Wall -Wextra -o cli-summary main.c
+
+# Run the program with a mix of valid/invalid arguments.
+./cli-summary 1 2 not-a-number 3
+
+# Expected behavior
+# - Non-integer inputs are reported and skipped.
+# - For the example above, the program should print that 3 values were accepted with a total of 6 and an average of 2.00.

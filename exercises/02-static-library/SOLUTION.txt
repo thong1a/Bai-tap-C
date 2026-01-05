@@ -1,0 +1,17 @@
+# Reference build steps
+mkdir -p build
+
+# 1) Compile the library object file.
+gcc -std=c11 -Wall -Wextra -Iinclude -c src/stats.c -o build/stats.o
+
+# 2) Archive it into a static library.
+ar rcs build/libstats.a build/stats.o
+
+# 3) Compile and link the demo app against the static library.
+gcc -std=c11 -Wall -Wextra -Iinclude app/main.c -Lbuild -lstats -o build/stats-demo
+
+# 4) Run the demo.
+./build/stats-demo
+
+# Expected behavior
+# The demo should print summary statistics (min, max, mean) over a hardcoded dataset.
